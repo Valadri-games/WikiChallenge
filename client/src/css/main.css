@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override rem size */
+
+:root {
+    font-size: 11.2px;
+}
+
+/* Root variables */
+
+:root {
+    --color-900: #0b0e11;
+    --color-800: #151a21;
+    --color-700: #242c37;
+    --color-600: #323d4d;
+    --color-300: #5d7290;
+    --color-200: #b2bdcd;
+    --color-100: #dee3ea;
+
+    --color-accent: #49b583;
+}
+
+/* Body */
+
+body {
+    font-family: "Poppins", sans-serif;
+    overscroll-behavior-y: contain;
+    background-color: var(--color-900);
+    color: var(--color-100);
+    overflow: hidden;       
+}
+
+/* General style */
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+    padding: 0px;
+    color: var(--color-100);
+    user-select: none;
+}
+
+img {
+    user-select: none;
+}
+
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+/* Tailwind like classes */
+
+.bg-900 {
+    background-color: var(--color-900);
+}
+
+.bg-800 {
+    background-color: var(--color-800);
+}
+
+.bg-700 {
+    background-color: var(--color-700);
+}
+
+.color-100 {
+    color: var(--color-100);
+}
+
+.color-200 {
+    color: var(--color-200);
+}
+
+.color-accent {
+    color: var(--color-accent);
+}
+
+/* Petite vue */
+
+[v-cloak] {
+    display: none;
+}
+
+/* Selection */
+
+::selection {
+    color: var(--color-100);
+    background: var(--color-accent);
+}
+
+/* Scroll bar */
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 0px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-700);
+    border-radius: 10px;
+    border: 5px solid var(--color-900);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-600);
+}
+
+@media screen and (max-width: 1000px) { 
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+}
