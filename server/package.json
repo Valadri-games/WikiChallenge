@@ -1,0 +1,6 @@
+{
+  "name": "wikichallenge-server",
+  "scripts": {
+    "dev": "node wikichallengeserver.js"
+  }
+}
