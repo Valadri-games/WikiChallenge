@@ -551,12 +551,12 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mt-5 {
-  margin-top: 1.25rem;
+.static {
+  position: static;
 }
 
-.ml-5 {
-  margin-left: 1.25rem;
+.relative {
+  position: relative;
 }
 
 .filter {
