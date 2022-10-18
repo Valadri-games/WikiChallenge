@@ -27,7 +27,7 @@
 body {
     font-family: "Poppins", sans-serif;
     overscroll-behavior-y: contain;
-    background-color: var(--color-900);
+    /* background-color: var(--color-900); */
     color: var(--color-100);
     overflow: hidden;       
 }
