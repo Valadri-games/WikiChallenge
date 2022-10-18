@@ -25,8 +25,10 @@ const server = http.createServer().listen(8080);
 const io = require('socket.io')(server, { cors: { origin: '*' } });
 
 io.sockets.on('connection',(socket: any) => {
-    socket.on('test', () => {
-        
+    Analitics.getInstance().data.connectedUsers += 1;
+
+    socket.on('disconnect', () => {
+        Analitics.getInstance().data.connectedUsers -= 1;
     });
 });
 
@@ -47,11 +49,11 @@ class DB {
         try {
             this.mongoClient = new MongoClient(process.env.DATABASE_URI);
             await this.mongoClient.connect();
-        
+            
+            console.log('Succefully connected to databse')
             return true;
         } catch (error) {
             console.error('Connection to MongoDB Atlas failed!', error);
-
             return false;
         }
     }
@@ -66,8 +68,13 @@ class Analitics {
         if(!Analitics._instance) Analitics._instance = new Analitics();
         return Analitics._instance;
     }
+    constructor() {
+        
+    }
 
-    constructor() {}
+    public data: AnaliticsData = {
+        connectedUsers: 0,
+    };
 }
 
 /* Main */
@@ -82,3 +89,9 @@ async function main() {
 }
 
 main();
+
+/* Interfaces */
+
+interface AnaliticsData {
+    connectedUsers: number,
+}
