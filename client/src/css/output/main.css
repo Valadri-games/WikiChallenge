@@ -551,6 +551,14 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.static {
+  position: static;
+}
+
+.relative {
+  position: relative;
+}
+
 .mt-5 {
   margin-top: 1.25rem;
 }
