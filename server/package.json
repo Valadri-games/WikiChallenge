@@ -2,11 +2,13 @@
   "name": "wikichallenge-server",
   "scripts": {
     "dev": "concurrently \"npm run dev:node\" \"npm run dev:ts\"",
-    "dev:node": "nodemon wikichallenge-server.ts",
+    "dev:node": "nodemon src/wikichallenge-server.ts",
     "dev:ts": "tsc --watch >/output/null"
   },
   "dependencies": {
     "concurrently": "^7.4.0",
+    "dotenv": "^16.0.3",
+    "mongodb": "^4.10.0",
     "nodemon": "^2.0.20",
     "socket.io": "^4.5.3",
     "ts-node": "^10.9.1"
