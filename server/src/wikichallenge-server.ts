@@ -80,12 +80,18 @@ class Analitics {
 /* Main */
 
 async function main() {
-    let db = DB.getInstance();
+    // let db = DB.getInstance();
 
-    let result = await db.connectToCluster();
-    if(!result) process.abort();
+    // let result = await db.connectToCluster();
+    // if(!result) process.abort();
 
-    let analitics = Analitics.getInstance();
+    // let analitics = Analitics.getInstance();
+
+    // fetch("https://fr.wikipedia.org/wiki/Sp%C3%A9cial:Page_au_hasard").then((result) => {
+    //     return result.text();
+    // }).then((data) => {
+    //     console.log(data)
+    // });
 }
 
 main();
@@ -95,3 +101,9 @@ main();
 interface AnaliticsData {
     connectedUsers: number,
 }
+
+// Get random article
+// https://fr.wikipedia.org/w/api.php?action=query&format=json&list=random&rnnamespace=0&rnlimit=2
+
+// Check page title exist
+// https://fr.wikipedia.org/w/api.php?action=query&titles=Test_nom_de_page

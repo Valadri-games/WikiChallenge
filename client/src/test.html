@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> WikiChallenge </title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/output/main.css">
+    <script type="module" src="js/output/preload.js"></script>
+</head>
+<body>
+    <!-- Global warpper -->
+    <div class="overflow-hidden w-full h-full absolute">
+        <!-- Add loader in full html css to accommodate for low speed connection -->
+
+        <!-- start of home page -->
+        <ce-page name="home-page" extends="HomePage">
+            <p> test </p>
+            <a href="#test-page" class="text-5xl color-100">lien</a>
+        </ce-page>
+
+        <ce-page name="test-page" extends="HomePage" class="hidden">
+            <p> nouvelle page </p>
+            <a href="#home-page" class="text-5xl color-100">lien</a>
+        </ce-page>
+
+        <!-- <div page>
+            <p> bonjour </p>
+        </div> -->
+        <!-- end of home page -->
+    </div>
+    
+    <script type="module" src="js/output/main.js"></script>
+</body>
+</html>

@@ -563,12 +563,16 @@ video {
   position: relative;
 }
 
-.top-0 {
-  top: 0px;
+.mt-20 {
+  margin-top: 5rem;
 }
 
-.left-0 {
-  left: 0px;
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-full {
@@ -583,12 +587,9 @@ video {
   overflow: hidden;
 }
 
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
-.overflow-x-hidden {
-  overflow-x: hidden;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .filter {
@@ -675,6 +676,23 @@ a {
 
 .color-accent {
   color: var(--color-accent);
+}
+
+.w-1000px {
+  width: 1000px;
+}
+
+/* Tailwind shortcut */
+
+[page] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0%;
+  right: 0%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--color-accent);
 }
 
 /* Petite vue */
