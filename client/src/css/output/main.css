@@ -16,7 +16,7 @@
   /* 2 */
   border-style: solid;
   /* 2 */
-  border-color: currentColor;
+  border-color: #e5e7eb;
   /* 2 */
 }
 
@@ -583,8 +583,8 @@ video {
   width: 100%;
 }
 
-.w-1\/2 {
-  width: 50%;
+.w-\[80\%\] {
+  width: 80%;
 }
 
 .-translate-x-1\/2 {
@@ -607,11 +607,6 @@ video {
 
 .border-4 {
   border-width: 4px;
-}
-
-.border-maindark {
-  --tw-border-opacity: 1;
-  border-color: rgb(71 71 129 / var(--tw-border-opacity));
 }
 
 .filter {
@@ -694,6 +689,10 @@ a {
 
 .color-200 {
   color: var(--color-200);
+}
+
+.color-maindark {
+  border-color: #474781;
 }
 
 .color-accent {
