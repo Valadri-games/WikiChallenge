@@ -11,10 +11,10 @@
 /* Root variables */
 
 :root {
-    --color-900: #0b0e11;
+    --color-900: #f3f3f3;
     --color-800: #151a21;
     --color-700: #242c37;
-    --color-600: #323d4d;
+    --color-600: #1e1e36;
     --color-300: #5d7290;
     --color-200: #b2bdcd;
     --color-100: #dee3ea;
@@ -69,6 +69,10 @@ a {
     background-color: var(--color-700);
 }
 
+.border-600{
+    border-color: var(--color-600);
+}
+
 .color-100 {
     color: var(--color-100);
 }
@@ -81,6 +85,27 @@ a {
     color: var(--color-accent);
 }
 
+.bg-accent {
+    background-color: var(--color-accent);
+}
+
+.aspect-11\/6{
+    aspect-ratio: 11 / 6;
+}
+
+.flex-2{
+    flex: 2
+}
+
+.rounded-35{
+    border-radius: 35px;
+}
+
+.bg-gradient{
+    background: radial-gradient(61.44% 119.27% at 0% 0%, #76DD7A 0%, rgba(117, 220, 121, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 74.87% at 100% 0%, #76A5DD 0%, rgba(117, 165, 220, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 74.87% at 100% 100%, #DD7688 0%, rgba(220, 117, 136, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(61.44% 119.27% at 0% 100%, #DDCC76 0%, rgba(220, 213, 141, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+}
+
+
 /* Tailwind shortcut */
 
 [page] {
@@ -91,8 +116,7 @@ a {
     right: 0%;
     overflow-x: hidden;
     overflow-y: auto;
-    background-color: var(--color-accent);
-    
+    background-color: var(--color-900);
 }
 
 /* Petite vue */

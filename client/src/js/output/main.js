@@ -6,8 +6,7 @@ class CePage extends HTMLElement {
     }
     _extends;
     _name = "";
-    connectedCallback() {
-    }
+    connectedCallback() { }
     static get observedAttributes() {
         return ["name", "extends"];
     }
@@ -21,6 +20,7 @@ class CePage extends HTMLElement {
     extends(value) {
         let object = {
             "HomePage": HomePage,
+            "SoloGamePage": SoloGamePage,
         };
         this._extends = new object[value]();
     }
@@ -59,16 +59,36 @@ class PageNaviguator {
         this.pages[name] = object;
     }
     goto(pageName) {
+        if (this.pages[this.history[this.history.length - 1]].child.onClose)
+            this.pages[this.history[this.history.length - 1]].child.onClose();
         this.pages[this.history[this.history.length - 1]].close();
+        if (this.pages[pageName].child.onOpen)
+            this.pages[pageName].child.onOpen();
         this.pages[pageName].open();
         this.history.push(pageName);
+    }
+    updateLocation() {
+        let currentHash = window.location.hash.slice(1);
+        if (currentHash != "") {
+            if (this.history[this.history.length - 1] != currentHash) {
+                this.goto(currentHash);
+            }
+        }
     }
 }
 class HomePage {
     constructor() {
     }
 }
+class SoloGamePage {
+    constructor() {
+    }
+    onOpen() {
+        console.log('test');
+    }
+}
 async function main() {
     customElements.define("ce-page", CePage);
+    PageNaviguator.getInstance().updateLocation();
 }
 main();

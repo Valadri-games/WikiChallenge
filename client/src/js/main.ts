@@ -8,9 +8,7 @@ class CePage extends HTMLElement {
     private _extends: any;
     private _name: string = "";
 
-    public connectedCallback(): void {
-        
-    }
+    public connectedCallback(): void {}
 
     public static get observedAttributes(): Array<string> {
         return ["name", "extends"];
@@ -29,6 +27,7 @@ class CePage extends HTMLElement {
     public extends(value: string): void {
         let object: Record<string, Object> = {
             "HomePage": HomePage,
+            "SoloGamePage": SoloGamePage,
         }
 
         //@ts-ignore
@@ -64,24 +63,36 @@ class PageNaviguator {
     private pages: Record<string, CePage> = {};
     private history: Array<string> = ["home-page"];
 
-    private bindNaviguationEvent() {
+    private bindNaviguationEvent(): void {
         window.addEventListener('hashchange', (event) => {
             let destination = window.location.hash.slice(1);
             if(destination == "") destination = "home-page";
             
-            this.goto(destination)
+            this.goto(destination);
         });
     }
 
-    public registerPage(name: string, object: CePage) {
+    public registerPage(name: string, object: CePage): void {
         this.pages[name] = object;
     }
 
-    private goto(pageName: string) {
+    private goto(pageName: string): void {
+        if(this.pages[this.history[this.history.length - 1]].child.onClose) this.pages[this.history[this.history.length - 1]].child.onClose();
         this.pages[this.history[this.history.length - 1]].close();
+
+        if(this.pages[pageName].child.onOpen) this.pages[pageName].child.onOpen();
         this.pages[pageName].open();
 
         this.history.push(pageName);
+    }
+
+    public updateLocation(): void {
+        let currentHash = window.location.hash.slice(1);
+        if(currentHash != "") {
+            if(this.history[this.history.length - 1] != currentHash) {
+                this.goto(currentHash);
+            }
+        }
     }
 }
 
@@ -91,8 +102,20 @@ class HomePage {
     }
 }
 
+class SoloGamePage {
+    constructor() {
+        
+    }
+
+    public onOpen(): void {
+        console.log('test')
+    }
+}
+
 async function main(): Promise<void> {
     customElements.define("ce-page", CePage);
+
+    PageNaviguator.getInstance().updateLocation();
 }
 
 main();

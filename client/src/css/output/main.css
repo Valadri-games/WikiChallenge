@@ -551,6 +551,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .static {
   position: static;
 }
@@ -563,12 +597,20 @@ video {
   position: relative;
 }
 
-.mt-20 {
-  margin-top: 5rem;
+.top-0 {
+  top: 0px;
+}
+
+.left-0 {
+  left: 0px;
 }
 
 .block {
   display: block;
+}
+
+.flex {
+  display: flex;
 }
 
 .hidden {
@@ -583,13 +625,47 @@ video {
   width: 100%;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.gap-32 {
+  gap: 8rem;
+}
+
 .overflow-hidden {
   overflow: hidden;
+}
+
+.border-4 {
+  border-width: 4px;
+}
+
+.p-40 {
+  padding: 10rem;
 }
 
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .filter {
@@ -605,10 +681,10 @@ video {
 /* Root variables */
 
 :root {
-  --color-900: #0b0e11;
+  --color-900: #f3f3f3;
   --color-800: #151a21;
   --color-700: #242c37;
-  --color-600: #323d4d;
+  --color-600: #1e1e36;
   --color-300: #5d7290;
   --color-200: #b2bdcd;
   --color-100: #dee3ea;
@@ -666,6 +742,10 @@ a {
   background-color: var(--color-700);
 }
 
+.border-600{
+  border-color: var(--color-600);
+}
+
 .color-100 {
   color: var(--color-100);
 }
@@ -678,8 +758,24 @@ a {
   color: var(--color-accent);
 }
 
-.w-1000px {
-  width: 1000px;
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.aspect-11\/6{
+  aspect-ratio: 11 / 6;
+}
+
+.flex-2{
+  flex: 2
+}
+
+.rounded-35{
+  border-radius: 35px;
+}
+
+.bg-gradient{
+  background: radial-gradient(61.44% 119.27% at 0% 0%, #76DD7A 0%, rgba(117, 220, 121, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 74.87% at 100% 0%, #76A5DD 0%, rgba(117, 165, 220, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 74.87% at 100% 100%, #DD7688 0%, rgba(220, 117, 136, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(61.44% 119.27% at 0% 100%, #DDCC76 0%, rgba(220, 213, 141, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
 }
 
 /* Tailwind shortcut */
@@ -692,7 +788,7 @@ a {
   right: 0%;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: var(--color-accent);
+  background-color: var(--color-900);
 }
 
 /* Petite vue */
