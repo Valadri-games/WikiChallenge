@@ -17,7 +17,7 @@
     --color-600: #1e1e36;
     --color-300: #5d7290;
     --color-200: #b2bdcd;
-    --color-100: #dee3ea;
+    --color-100: #151a21;
 
     --color-accent: #49b583;
 }
@@ -25,7 +25,7 @@
 /* Body */
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "poppins", "Montserrat", sans-serif;
     overscroll-behavior-y: contain;
     background-color: var(--color-900);
     color: var(--color-100);
@@ -102,7 +102,7 @@ a {
 }
 
 .bg-gradient{
-    background: radial-gradient(61.44% 119.27% at 0% 0%, #76DD7A 0%, rgba(117, 220, 121, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 74.87% at 100% 0%, #76A5DD 0%, rgba(117, 165, 220, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 74.87% at 100% 100%, #DD7688 0%, rgba(220, 117, 136, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(61.44% 119.27% at 0% 100%, #DDCC76 0%, rgba(220, 213, 141, 0) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    background: radial-gradient(50.05% 97.16% at 100% 100%, #FF9EBE 20.83%, rgba(255, 158, 190, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 95.86% at 0% 0%, #AEFFBE 29.17%, rgba(174, 255, 190, 0.21) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50.05% 97.16% at 100% 0%, #94FFF1 31.25%, rgba(148, 255, 241, 0.27) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 96.98% at 0% 100%, #FFE48A 26.04%, rgba(255, 228, 138, 0.21) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
 }
 
 
