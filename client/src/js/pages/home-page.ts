@@ -6,7 +6,7 @@ export default class HomePage {
 
     private avatarList: Array<number> = [1, 2, 3, 4];
     private currentAvatar: number = 0;
-    private baseAvatarIconSrc: string = "../public/illustrations/avatar/avatar";
+    private baseAvatarIconSrc: string = "public/illustrations/avatar/avatar";
 
     constructor(parent: CePage, hooks: Record<string, any>) {
         this.parent = parent;

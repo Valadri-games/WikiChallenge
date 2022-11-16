@@ -6,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/output/main.css">
-    <script type="module" src="js/output/preload.js"></script>
+    <link rel="stylesheet" href="src/css/output/main.css">
+    <script type="module" src="src/js/output/preload.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,7 +48,7 @@
                 <div class="hidden sm:absolute bg-900 w-[1350px] h-[850px] -mt-7 rounded-[50px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 box-border p-10 home-desktop-solid-shadow sm:flex flex-col origin-top-left" bind-style-scale="pageScale">
                     <h1 class="font-bold text-center text-8xl mt-8"> Wikipedia Challenge </h1>
                     <div class="absolute top-0 left-0 mt-20 ml-12">
-                        <img class="h-16 w-16 opacity-0" src="../public/icons/back-arrow.svg" bind-style-opacity="arrowOpacity" bind-event-click="arrowBackClicked" />
+                        <img class="h-16 w-16 opacity-0" src="public/icons/back-arrow.svg" bind-style-opacity="arrowOpacity" bind-event-click="arrowBackClicked" />
                     </div>
 
                     <!-- Slide container start -->
@@ -66,7 +66,7 @@
                                         Personnalise la partie en choisissant ta page de départ et d'arrivée et les différentes règles du jeu&nbsp;!
                                     </p>
         
-                                    <img class="h-56 m-auto mt-4" src="../public/illustrations/ill1.svg" />
+                                    <img class="h-56 m-auto mt-4" src="public/illustrations/ill1.svg" />
                                 </div>
                             </div>
                             <!--  Left flex end -->
@@ -80,7 +80,7 @@
                                         </div>
     
                                         <div bind-event-click="changeAvatar" class="absolute top-full -translate-y-full -ml-56 bg-900 h-32 w-32 border-6 border-100 rounded-full cursor-pointer button-click-anim-1">
-                                            <img class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 m-auto h-20 w-20" src="../public/icons/looped-arrow.svg" />
+                                            <img class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 m-auto h-20 w-20" src="public/icons/looped-arrow.svg" />
                                         </div>
                                     </div>
     
@@ -104,7 +104,7 @@
                             <!--  Left flex start -->
                             <div class="relative flex-1">
                                 <div class="relative text-center mt-28">
-                                    <img class="absolute left-1/2 -translate-x-1/2 -ml-36 -mt-2 h-18 w-18" src="../public/icons/play-solo.svg" />
+                                    <img class="absolute left-1/2 -translate-x-1/2 -ml-36 -mt-2 h-18 w-18" src="public/icons/play-solo.svg" />
                                     <p class="text-5/5xl font-bold"> SOLO </p>
                                 </div>
 
@@ -123,7 +123,7 @@
                             <!-- Rigft flex start -->
                             <div class="relative flex-1">
                                 <div class="relative text-center mt-28">
-                                    <img class="absolute left-1/2 -translate-x-1/2 -ml-72 -mt-0 w-16 h-16" src="../public/icons/play-multi.svg" />
+                                    <img class="absolute left-1/2 -translate-x-1/2 -ml-72 -mt-0 w-16 h-16" src="public/icons/play-multi.svg" />
                                     <p class="text-5/5xl font-bold"> MULTIJOUEUR </p>
                                 </div>
 
@@ -192,7 +192,7 @@
                                             </div>
                     
                                             <div bind-event-click="mobileChangeAvatar" class="absolute top-full -translate-y-full -ml-36 bg-900 h-20 w-20 border-4 border-100 rounded-full cursor-pointer button-click-anim-1">
-                                                <img class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 m-auto h-12 w-12" src="../public/icons/looped-arrow.svg" />
+                                                <img class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 m-auto h-12 w-12" src="public/icons/looped-arrow.svg" />
                                             </div>
                                         </div>
                     
@@ -213,7 +213,7 @@
                                     <!-- Slide 2 start -->
                                     <div class="absolute w-full h-full duration-500 will-change-auto left-full" bind-style-left="secondMobileBoxLeft">
                                         <div class="absolute top-0 left-0 mt2 ml-2">
-                                            <img class="h-12 w-12 opacity-0" src="../public/icons/back-arrow.svg" bind-style-opacity="arrowOpacityMobile" bind-event-click="arrowBackMobileClicked" />
+                                            <img class="h-12 w-12 opacity-0" src="public/icons/back-arrow.svg" bind-style-opacity="arrowOpacityMobile" bind-event-click="arrowBackMobileClicked" />
                                         </div>
 
                                         <p class="font-bold text-4xl text-center mt-1"> MODE DE JEU </p>
@@ -224,7 +224,7 @@
 
                                         <div class="relative mt-4 flex flex-row justify-center">
                                             <div class="flex flex-row w-[220px] border-4 border-100 p-4 text-center rounded-full bg-accent box-mobile-solid-shadow box-mobile-solid-shadow-anim cursor-pointer button-click-anim-2" bind-event-click="">
-                                                <img class="h-10 w-10" src="../public/icons/play-multi-2.svg" />
+                                                <img class="h-10 w-10" src="public/icons/play-multi-2.svg" />
                                                 <p class="text-3xl font-medium flex-1 mt-1"> Jouer </p>
                                             </div>
                                         </div>
@@ -235,7 +235,7 @@
 
                                         <div class="relative mt-4 flex flex-row justify-center">
                                             <div class="flex flex-row w-[220px] border-4 border-100 p-4 text-center rounded-full bg-accent box-mobile-solid-shadow box-mobile-solid-shadow-anim cursor-pointer button-click-anim-2" bind-event-click="">
-                                                <img class="h-10 w-10" src="../public/icons/play-solo-2.svg" />
+                                                <img class="h-10 w-10" src="public/icons/play-solo-2.svg" />
                                                 <p class="text-3xl font-medium flex-1 mt-1"> Jouer </p>
                                             </div>
                                         </div>
@@ -256,7 +256,7 @@
                             <!-- Slide vertical start -->
                             <div class="absolute w-full h-full duration-500 flex flex-col will-change-auto" bind-style-top="verticalMobileBoxTop">
                                 <div class="flex flex-row justify-center" bind-event-click="rulesArrowBack">
-                                    <img class="h-12 w-12" src="../public/icons/top-arrow.svg" />
+                                    <img class="h-12 w-12" src="public/icons/top-arrow.svg" />
                                 </div>
 
                                 <p class="font-bold text-xl text-center mt-7">
@@ -321,7 +321,7 @@
         </ce-page>
     </div>
 
-    <script type="module" src="libs/jquery.js"></script>
-    <script type="module" src="js/output/main.js"></script>
+    <script type="module" src="src/libs/jquery.js"></script>
+    <script type="module" src="src/js/output/main.js"></script>
 </body>
 </html>
