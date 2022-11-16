@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+    <defs>
+        <style>.cls-1{filter:url(#luminosity-invert);}.cls-2{mask:url(#mask);}.cls-3{fill:#e0bb46;}.cls-4{fill:#c67967;}.cls-5{fill:#472e18;}.cls-6{fill:#ea9675;}.cls-7{fill:#1d1d28;}.cls-8{fill:#c66d82;}.cls-9{fill:none;stroke:#7a4642;stroke-linecap:round;stroke-miterlimit:10;stroke-width:17px;}</style>
+    </defs>
+
+    <g>
+        <path class="cls-3" d="M850,1000H150c0-147.17,90.93-273.12,219.71-324.76a351.49,351.49,0,0,1,260.58,0C759.07,726.88,850,852.83,850,1000Z"/>
+        <ellipse class="cls-4" cx="352.17" cy="516.63" rx="46.32" ry="61.14"/>
+        <path class="cls-4" d="M630.29,675.24a132.7,132.7,0,0,1-260.58,0,351.49,351.49,0,0,1,260.58,0Z"/>
+        <path class="cls-5" d="M400,186.82a142.23,142.23,0,0,1,44.53,7.1A158.88,158.88,0,0,1,713,308.79c0,87.69-71.13,158.79-158.87,158.79a158.18,158.18,0,0,1-75.94-19.29A142.46,142.46,0,1,1,400,186.82Z"/>
+        <ellipse class="cls-4" cx="641.07" cy="516.63" rx="46.32" ry="61.14"/>
+        <path class="cls-6" d="M500.07,706.61h0A148.22,148.22,0,0,1,351.84,558.39l-10-189.46H658.29l-10,189.46A148.22,148.22,0,0,1,500.07,706.61Z"/>
+        <path class="cls-5" d="M621.6,258a61.57,61.57,0,0,0-10.14.85,86.83,86.83,0,0,0-143.41-14.7,106.2,106.2,0,1,0,17.73,127,86.82,86.82,0,0,0,100.46-1.7A61.34,61.34,0,1,0,621.6,258Z"/>
+        <ellipse class="cls-7" cx="572.94" cy="493.1" rx="18.12" ry="18.12"/>
+        <ellipse class="cls-7" cx="468.88" cy="493.1" rx="18.12" ry="18.12"/>
+        <rect class="cls-7" x="403.54" y="444.52" width="55.52" height="23.06" rx="11.53" transform="translate(-103.34 127.17) rotate(-15)"/>
+        <rect class="cls-7" x="572.76" y="434.52" width="55.52" height="23.06" rx="11.53" transform="translate(135.91 -140.23) rotate(15)"/>
+        <ellipse class="cls-8" cx="583.04" cy="537.77" rx="15.24" ry="15.23"/>
+        <ellipse class="cls-8" cx="418.78" cy="537.77" rx="15.24" ry="15.23"/>
+        <path class="cls-9" d="M543.15,553.78a32.4,32.4,0,0,1-45.45,0"/>
+    </g>
+</svg>

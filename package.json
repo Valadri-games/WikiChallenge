@@ -2,7 +2,7 @@
   "name": "wikichallenge-runall",
   "scripts": {
     "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
-    "dev:server": "cd server && npm run dev",
+    "dev:server": "cd server/socket && npm run dev",
     "dev:client": "cd client && npm run dev"
   },
   "dependencies": {

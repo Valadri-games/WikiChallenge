@@ -1,6 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 /* Override rem size */
 
@@ -11,21 +11,21 @@
 /* Root variables */
 
 :root {
-    --color-900: #f3f3f3;
-    --color-800: #151a21;
-    --color-700: #242c37;
-    --color-600: #1e1e36;
-    --color-300: #5d7290;
-    --color-200: #b2bdcd;
-    --color-100: #151a21;
+    --color-900: #F4F4F4;
+    /* --color-800: #f3f3f3;
+    --color-700: #f6f6f6; */
+    /* --color-600: #1e1e36; */
+    /* --color-300: #222222;
+    --color-200: #111111; */
+    --color-100: #62506D;
 
-    --color-accent: #49b583;
+    --color-accent: #AE8BBF;
 }
 
 /* Body */
 
 body {
-    font-family: "poppins", "Montserrat", sans-serif;
+    font-family: "Poppins", "Montserrat", sans-serif;
     overscroll-behavior-y: contain;
     background-color: var(--color-900);
     color: var(--color-100);
@@ -43,7 +43,6 @@ p, h1, h2, h3, h4, h5, h6 {
     margin: 0px;
     padding: 0px;
     color: var(--color-100);
-    user-select: none;
 }
 
 img {
@@ -61,25 +60,17 @@ a {
     background-color: var(--color-900);
 }
 
-.bg-800 {
+.color-900 {
+    color: var(--color-900);
+}
+
+/* .bg-800 {
     background-color: var(--color-800);
 }
 
 .bg-700 {
     background-color: var(--color-700);
-}
-
-.border-600{
-    border-color: var(--color-600);
-}
-
-.color-100 {
-    color: var(--color-100);
-}
-
-.color-200 {
-    color: var(--color-200);
-}
+} */
 
 .color-accent {
     color: var(--color-accent);
@@ -89,40 +80,123 @@ a {
     background-color: var(--color-accent);
 }
 
-.aspect-11\/6{
-    aspect-ratio: 11 / 6;
+.color-100 {
+    color: var(--color-100);
 }
 
-.flex-2{
-    flex: 2
+.bg-100 {
+    background-color: var(--color-100);
 }
 
-.rounded-35{
-    border-radius: 35px;
+.border-100 {
+    border-color: var(--color-100);
 }
 
-.bg-gradient{
-    background: radial-gradient(50.05% 97.16% at 100% 100%, #FF9EBE 20.83%, rgba(255, 158, 190, 0.2) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 95.86% at 0% 0%, #AEFFBE 29.17%, rgba(174, 255, 190, 0.21) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50.05% 97.16% at 100% 0%, #94FFF1 31.25%, rgba(148, 255, 241, 0.27) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(50% 96.98% at 0% 100%, #FFE48A 26.04%, rgba(255, 228, 138, 0.21) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+/* .color-200 {
+    color: var(--color-200);
+} */
+
+.border-6 {
+    border-width: 6px;
+}
+
+.border-5 {
+    border-width: 5px;
+}
+
+.text-5\/5xl {
+    font-size: 29pt;
+    line-height: 35pt;
+}
+
+.placeholder-color::placeholder {
+    color: var(--color100);
+    opacity: 0.5;
+}
+
+.w-18 {
+    width: 4.5rem;
+}
+
+.h-18 {
+    height: 4.5rem;
+}
+
+/* Home page mobile header */
+
+@media screen and ( max-height: 600px ) {
+    .home-page-mobile-header {
+        display: none;
+    }
+}
+
+/* Home solid shadow */
+
+.home-desktop-solid-shadow {
+    box-shadow: 30px 30px 0px 5px var(--color-100)
+}
+
+.home-mobile-solid-shadow {
+    box-shadow: 10px 10px 0px 2px var(--color-100)
+}
+
+.box-desktop-solid-shadow {
+    box-shadow: 12px 12px 0px 1px var(--color-100)
+}
+
+.box-mobile-solid-shadow {
+    box-shadow: 6px 6px 0px 0.5px var(--color-100)
+}
+
+.box-solid-shadow-anim:active {
+    box-shadow: 7px 7px 0px 1px var(--color-100)
+}
+
+.box-mobile-solid-shadow-anim:active {
+    box-shadow: 3px 3px 0px 0.5px var(--color-100)
+}
+
+/* Button animation */
+
+.button-click-anim-1:active {
+    margin-top: -3px;
+    scale: 0.96;
+}
+
+.button-click-anim-2:active {
+    transform: translateY(5px);
 }
 
 
-/* Tailwind shortcut */
+/* Mobile hamburger */
 
-[page] {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0%;
-    right: 0%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    background-color: var(--color-900);
+#menu-label div {
+    transition: transform 0.2s, margin-top 0.2s linear 0.2s, opacity 0.2s linear 0.2s;
 }
 
-/* Petite vue */
+:checked + #menu-label div {
+    transition: transform 0.2s linear 0.2s, margin-top 0.2s, opacity 0.2s;
+}
 
-[v-cloak] {
-    display: none;
+:checked + #menu-label div:nth-child(1) {
+    transform: rotate(-45deg);
+    margin-top: 10px;
+}
+
+:checked + #menu-label div:nth-child(2) {
+    opacity: 0;
+    margin-top: -10px;
+}
+
+:checked + #menu-label div:nth-child(3) {
+    transform: rotate(45deg);
+    margin-top: 1.5px;
+}
+
+/* Mobile menu */
+
+.mobileMenuOpen {
+    left: 0px;
 }
 
 /* Selection */

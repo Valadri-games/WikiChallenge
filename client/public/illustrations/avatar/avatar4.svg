@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+    <defs>
+        <style>.cls-1{filter:url(#luminosity-invert);}.cls-2{mask:url(#mask);}.cls-3{fill:#1e150e;}.cls-4{fill:#e5b5b3;}.cls-5{fill:#9be053;}.cls-6{fill:#92cc4e;}.cls-7{fill:#f2c5bb;}.cls-8{fill:#1d1d28;}.cls-9{fill:#d84725;}.cls-10{fill:#f9f9f9;}</style>
+    </defs>
+
+    <g>
+        <circle class="cls-3" cx="500" cy="394.15" r="188.39"/>
+        <ellipse class="cls-4" cx="375.85" cy="496.63" rx="37.51" ry="49.51"/>
+        <ellipse class="cls-4" cx="617.39" cy="496.63" rx="37.51" ry="49.51"/>
+        <rect class="cls-3" x="311.61" y="394.15" width="376.78" height="362.91"/>
+        <path class="cls-5" d="M850,1000H150c0-145.89,89.37-271,216.41-323.41l1.48-.61,1.82-.74a351.49,351.49,0,0,1,260.58,0c1.11.44,2.21.89,3.31,1.35A350.22,350.22,0,0,1,850,1000Z"/>
+        <path class="cls-6" d="M633.6,676.59a136.18,136.18,0,0,1-267.19,0l1.48-.61,1.82-.74a351.49,351.49,0,0,1,260.58,0C631.4,675.68,632.5,676.13,633.6,676.59Z"/>
+        <path class="cls-7" d="M500,696.62h0c-66.77,0-121.94-47.1-125.77-107.36l-15.3-240.81H641.07l-15.3,240.81C621.94,649.52,566.77,696.62,500,696.62Z"/>
+        <ellipse class="cls-8" cx="552.94" cy="493.1" rx="18.12" ry="18.12"/>
+        <ellipse class="cls-8" cx="448.88" cy="493.1" rx="18.12" ry="18.12"/>
+        <rect class="cls-3" x="405.25" y="429.79" width="55.52" height="23.06" rx="11.53"/>
+        <rect class="cls-3" x="542.88" y="429.79" width="55.52" height="23.06" rx="11.53"/>
+        <rect class="cls-9" x="384.78" y="522.53" width="48.23" height="27.33" rx="13.66"/>
+        <rect class="cls-9" x="570.64" y="522.53" width="48.23" height="27.33" rx="13.66"/>
+        <circle class="cls-3" cx="582.28" cy="348.45" r="70.95"/>
+        <circle class="cls-3" cx="465.32" cy="334.32" r="85.08"/>
+        <circle class="cls-3" cx="380.24" cy="362.36" r="34.56"/>
+        <path class="cls-10" d="M465.19,572.53c0-9.74,15.58-7.64,34.81-7.64s34.81-2.1,34.81,7.64S519.23,590.17,500,590.17,465.19,582.27,465.19,572.53Z"/>
+    </g>
+</svg>

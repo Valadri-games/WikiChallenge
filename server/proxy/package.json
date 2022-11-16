@@ -1,0 +1,12 @@
+{
+  "name": "wikichallenge-proxy",
+  "type": "module",
+  "scripts": {
+    "dev": "npm run dev:node",
+    "dev:node": "nodemon src/wikichallenge-proxy.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.2.10",
+    "nodemon": "^2.0.20"
+  }
+}

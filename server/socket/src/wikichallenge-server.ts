@@ -14,7 +14,6 @@ import { MongoClient } from "../node_modules/mongodb/mongodb";
 //@ts-ignore
 const { MongoClient } = require('mongodb');
 
-
 /*
 
     Setup server
@@ -107,3 +106,6 @@ interface AnaliticsData {
 
 // Check page title exist
 // https://fr.wikipedia.org/w/api.php?action=query&titles=Test_nom_de_page
+
+// Simple url
+// https://fr.wikipedia.org/wiki/Ananas

@@ -7,21 +7,321 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="css/output/main.css">
-
     <script type="module" src="js/output/preload.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Global warpper -->
     <div class="overflow-hidden w-full h-full absolute">
-        <!--
+        <!-- Add loader in full html css to accommodate for low speed connection -->
 
-            Put pages code into the global warper to prevent scoll-bars showing up on mobile devices when changing page
+        <!-- Mobile navigation menu start -->
+        <div id="mobileMenu" class="fixed w-full h-full pt-44 box-border top-0 -left-full md:hidden duration-500 bg-accent z-20 overflow-hidden">
+            <div class="absolute top-1/2 -translate-y-1/2 h-2/3 w-full flex flex-col justify-around pl-10 pr-10">
+                <div class="text-center text-4xl font-medium cursor-pointer">
+                    <a href="" class="color-900"> VALADRI GAMES </a>
+                </div>
 
-        -->
-    </div>
+                <div class="text-center text-4xl font-medium cursor-pointer">
+                    <a href="" class="color-900"> CONDITIONS D'UTILISATION </a>
+                </div>
+
+                <div class="text-center text-4xl font-medium cursor-pointer">
+                    <a href="" class="color-900"> TWITTER </a>
+                </div>
+
+                <div class="text-center text-4xl font-medium cursor-pointer">
+                    <a href="" class="color-900"> CONTACT </a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile navigation menu en -->
+
+        <!-- Home page start -->
+        <ce-page ce-name="home-page" ce-extends="home-page">
+            <!-- Page wrapper start -->
+            <div class="absolute w-full h-full bg-accent">
+                <!-- Desktop version start -->
+                <div class="hidden sm:absolute bg-900 w-[1350px] h-[850px] -mt-7 rounded-[50px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 box-border p-10 home-desktop-solid-shadow sm:flex flex-col origin-top-left" bind-style-scale="pageScale">
+                    <h1 class="font-bold text-center text-8xl mt-8"> Wikipedia Challenge </h1>
+                    <div class="absolute top-0 left-0 mt-20 ml-12">
+                        <img class="h-16 w-16 opacity-0" src="../public/icons/back-arrow.svg" bind-style-opacity="arrowOpacity" bind-event-click="arrowBackClicked" />
+                    </div>
+
+                    <!-- Slide container start -->
+                    <div class="relative flex-1 overflow-hidden">
+                        <!-- Slide 1 start -->
+                        <div class="absolute w-full h-full flex flex-row duration-500 will-change-auto" bind-style-left="firstBoxLeft">
+                            <!--  Left flex start -->
+                            <div class="relative flex-1">
+                                <div class="absolute top-1/2 -translate-y-1/2 h-min">
+                                    <p class="font-medium text-5/5xl text-center ml-20 mr-20">
+                                        Joue avec tes amis dans un salon privé et découvre les différents modes de jeux.
+                                    </p>
+        
+                                    <p class="font-medium text-5/5xl text-center ml-20 mr-20 mt-12">
+                                        Personnalise la partie en choisissant ta page de départ et d'arrivée et les différentes règles du jeu&nbsp;!
+                                    </p>
+        
+                                    <img class="h-56 m-auto mt-4" src="../public/illustrations/ill1.svg" />
+                                </div>
+                            </div>
+                            <!--  Left flex end -->
+                            
+                            <!-- Rigft flex start -->
+                            <div class="relative flex-1">
+                                <div class="absolute top-1/2 -translate-y-1/2 h-min w-full">
+                                    <div class="relative h-96 w-full flex flex-row justify-center">
+                                        <div class="h-96 w-96 bg-900 rounded-full box-desktop-solid-shadow border-6 border-100 overflow-hidden">
+                                            <img class="-mt-[5px] scale-105" bind-src="avatarIconSrc" />
+                                        </div>
     
-    <script type="module" src="libs/petite-vue.js"></script>
-    <script type="module" src="libs/socket.io.js"></script>
+                                        <div bind-event-click="changeAvatar" class="absolute top-full -translate-y-full -ml-56 bg-900 h-32 w-32 border-6 border-100 rounded-full cursor-pointer button-click-anim-1">
+                                            <img class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 m-auto h-20 w-20" src="../public/icons/looped-arrow.svg" />
+                                        </div>
+                                    </div>
+    
+                                    <div class="relative mt-24 flex flex-row justify-center">
+                                        <input bind-event-input="nameInput" type="text" placeholder="Player 123" class="border-6 border-100 font-medium p-5 pl-10 pr-10 text-5/5xl rounded-full box-desktop-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" autofocus="false" />
+                                    </div>
+    
+                                    <div class="relative mt-24 flex flex-row justify-center">
+                                        <div class="border-6 border-100 p-5 pl-32 pr-32 rounded-full bg-accent box-desktop-solid-shadow box-solid-shadow-anim w-min cursor-pointer button-click-anim-2" bind-event-click="playButtonClicked">
+                                            <p class="text-5/5xl font-medium"> Jouer </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Rigft flex end -->
+                        </div>
+                        <!-- Slide 1 end -->
+
+                        <!-- Slide 2 start -->
+                        <div class="absolute w-full h-full flex flex-row duration-500 will-change-auto" bind-style-left="secondBoxLeft">
+                            <!--  Left flex start -->
+                            <div class="relative flex-1">
+                                <div class="relative text-center mt-28">
+                                    <img class="absolute left-1/2 -translate-x-1/2 -ml-36 -mt-2 h-18 w-18" src="../public/icons/play-solo.svg" />
+                                    <p class="text-5/5xl font-bold"> SOLO </p>
+                                </div>
+
+                                <p class="font-medium text-5/5xl text-center ml-20 mr-20 mt-28">
+                                    Créé une partie solo personnalisée et réaliser le meilleur temps ou le plus court chemin du défis quotidien !
+                                </p>
+
+                                <div class="relative mt-16 flex flex-row justify-center">
+                                    <div class="border-6 border-100 p-5 pl-32 pr-32 rounded-full bg-accent box-desktop-solid-shadow box-solid-shadow-anim w-min cursor-pointer button-click-anim-2" bind-event-click="playSoloClicked">
+                                        <a href="#play-solo" class="text-5/5xl font-medium color-100"> Jouer </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  Left flex end -->
+                            
+                            <!-- Rigft flex start -->
+                            <div class="relative flex-1">
+                                <div class="relative text-center mt-28">
+                                    <img class="absolute left-1/2 -translate-x-1/2 -ml-72 -mt-0 w-16 h-16" src="../public/icons/play-multi.svg" />
+                                    <p class="text-5/5xl font-bold"> MULTIJOUEUR </p>
+                                </div>
+
+                                <p class="font-medium text-5/5xl text-center ml-20 mr-20 mt-28">
+                                    Rejoindre une partie privée:
+                                </p>
+
+                                <div class="relative mt-5 flex flex-row gap-10 pr-5">
+                                    <input type="text" placeholder="#XXXX" class="flex-1 w-0 border-6 border-100 font-medium p-5 pl-10 pr-10 text-5/5xl rounded-full box-desktop-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" autofocus="false" />
+                                    
+                                    <div class="border-6 border-100 p-5 pl-32 pr-32 rounded-full bg-accent box-desktop-solid-shadow box-solid-shadow-anim w-min cursor-pointer button-click-anim-2" bind-event-click="playMultiClicked">
+                                        <p class="text-5/5xl font-medium"> Rejoindre </p>
+                                    </div>
+                                </div>
+
+                                <p class="font-medium text-5/5xl text-center ml-20 mr-20 mt-24">
+                                    Créer mon salon privée:
+                                </p>
+
+                                <div class="relative mt-5 flex flex-row justify-center" bind-event-click="playSoloClicked">
+                                    <div class="border-6 border-100 p-5 pl-32 pr-32 rounded-full bg-accent box-desktop-solid-shadow box-solid-shadow-anim w-min cursor-pointer button-click-anim-2">
+                                        <p class="text-5/5xl font-medium"> Jouer </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Rigft flex end -->
+                        </div>
+                        <!-- Slide 2 end -->
+                    </div>
+                    <!-- Slide container end -->
+
+                    <!-- Current slide indicator start -->
+                    <div class="flex flex-row justify-center gap-5">
+                        <div class="h-5 w-5 rounded-full bg-accent duration-300" bind-class-bg-100="firstDotSelected"></div>
+                        <div class="h-5 w-5 rounded-full bg-accent duration-300" bind-class-bg-100="secondDotSelected"></div>
+                    </div>
+                    <!-- Current slide indicator end -->
+                </div>
+                <!-- Desktop version end -->
+
+                <!-- Mobile version start -->
+                <div class="sm:hidden">
+                    <div class="absolute left-0 top-0 mt-8 ml-8 cursor-pointer home-page-mobile-header z-30" bind-event-click="hamburgerMenuCliked">
+                        <input id="top-menu-hamburger" type="checkbox" class="hidden" />
+                        
+                        <label id="menu-label" for="top-menu-hamburger">
+                            <div class="h-1.5 w-12 bg-900 rounded-full"></div>
+                            <div class="h-1.5 w-12 bg-900 rounded-full mt-2"></div>
+                            <div class="h-1.5 w-12 bg-900 rounded-full mt-2"></div>
+                        </label>
+                    </div>
+
+                    <p class="text-[27px] leading-[32px] text-center color-900 font-bold mt-4 home-page-mobile-header"> Wikipedia<br />Challenge </p>
+
+                    <div class="absolute flex flex-col w-[290px] h-[445px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-900 rounded-[35px] box-border p-6 home-mobile-solid-shadow">
+                        <!-- Slide container verticla start -->
+                        <div class="relative overflow-hidden w-full h-full">
+                            <div class="relative overflow-hidden w-full h-full flex flex-col duration-500" bind-style-top="firstMobileBoxTop">
+                                <!-- Slide container horizontal start -->
+                                <div class="relative overflow-hidden w-full flex-1">
+                                    <!-- Slide 1 start -->
+                                    <div class="absolute w-full duration-500 will-change-auto" bind-style-left="firstMobileBoxLeft">
+                                        <div class="relative h-[190px] w-full flex flex-row justify-center">
+                                            <div class="h-[190px] w-[190px] bg-900 rounded-full box-mobile-solid-shadow border-4 border-100 overflow-hidden">
+                                                <img class="-mt-[3px] scale-105" bind-src="mobileAvatarIconSrc" />
+                                            </div>
+                    
+                                            <div bind-event-click="mobileChangeAvatar" class="absolute top-full -translate-y-full -ml-36 bg-900 h-20 w-20 border-4 border-100 rounded-full cursor-pointer button-click-anim-1">
+                                                <img class="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 m-auto h-12 w-12" src="../public/icons/looped-arrow.svg" />
+                                            </div>
+                                        </div>
+                    
+                                        <div class="relative mt-10 flex flex-row justify-center">
+                                            <input bind-event-input="nameInput" type="text" placeholder="Player 123" class="border-4 w-[240px] border-100 font-medium p-4 pl-6 pr-6 text-3xl rounded-full box-mobile-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" autofocus="false" />
+                                        </div>
+                    
+                                        <div class="relative mt-8 flex flex-row justify-center">
+                                            <div class="border-4 border-100 p-4 pl-20 pr-20 rounded-full bg-accent box-mobile-solid-shadow box-mobile-solid-shadow-anim w-min cursor-pointer button-click-anim-2" bind-event-click="playButtonMobileClicked">
+                                                <p class="text-3xl font-medium"> Jouer </p>
+                                            </div>
+                                        </div>
+                    
+                                        <p class="font-bold text-xl text-center mt-10" bind-event-click="readRulesButtonClicked"> DECOUVRIR LE PRINCIPE </p>
+                                    </div>
+                                    <!-- Slide 1 end -->
+
+                                    <!-- Slide 2 start -->
+                                    <div class="absolute w-full h-full duration-500 will-change-auto left-full" bind-style-left="secondMobileBoxLeft">
+                                        <div class="absolute top-0 left-0 mt2 ml-2">
+                                            <img class="h-12 w-12 opacity-0" src="../public/icons/back-arrow.svg" bind-style-opacity="arrowOpacityMobile" bind-event-click="arrowBackMobileClicked" />
+                                        </div>
+
+                                        <p class="font-bold text-4xl text-center mt-1"> MODE DE JEU </p>
+
+                                        <p class="font-bold text-xl text-center mt-10">
+                                            Amuse-toi en affrontant tes ami.e.s dans un salon privé et en personnalisant ta partie&nbsp;!
+                                        </p>
+
+                                        <div class="relative mt-4 flex flex-row justify-center">
+                                            <div class="flex flex-row w-[220px] border-4 border-100 p-4 text-center rounded-full bg-accent box-mobile-solid-shadow box-mobile-solid-shadow-anim cursor-pointer button-click-anim-2" bind-event-click="">
+                                                <img class="h-10 w-10" src="../public/icons/play-multi-2.svg" />
+                                                <p class="text-3xl font-medium flex-1 mt-1"> Jouer </p>
+                                            </div>
+                                        </div>
+
+                                        <p class="font-bold text-xl text-center mt-12">
+                                            Créer une partie solo personnalisée ou réalise le meilleure temps ou le plus court chemin du défi quotidien&nbsp;!
+                                        </p>
+
+                                        <div class="relative mt-4 flex flex-row justify-center">
+                                            <div class="flex flex-row w-[220px] border-4 border-100 p-4 text-center rounded-full bg-accent box-mobile-solid-shadow box-mobile-solid-shadow-anim cursor-pointer button-click-anim-2" bind-event-click="">
+                                                <img class="h-10 w-10" src="../public/icons/play-solo-2.svg" />
+                                                <p class="text-3xl font-medium flex-1 mt-1"> Jouer </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Slide 2 end -->
+                                </div>
+                                <!-- Slide container horizontal end -->
+
+                                <!-- Current slide indicator start -->
+                                <div class="flex flex-row justify-center gap-4">
+                                    <div class="h-3 w-3 rounded-full bg-accent duration-300" bind-class-bg-100="firstMobileDotSelected"></div>
+                                    <div class="h-3 w-3 rounded-full bg-accent duration-300" bind-class-bg-100="secondMobileDotSelected"></div>
+                                    <div class="h-3 w-3 rounded-full bg-accent duration-300" bind-class-bg-100="thirdMobileDotSelected"></div>
+                                </div>
+                                <!-- Current slide indicator end -->
+                            </div>
+
+                            <!-- Slide vertical start -->
+                            <div class="absolute w-full h-full duration-500 flex flex-col will-change-auto" bind-style-top="verticalMobileBoxTop">
+                                <div class="flex flex-row justify-center" bind-event-click="rulesArrowBack">
+                                    <img class="h-12 w-12" src="../public/icons/top-arrow.svg" />
+                                </div>
+
+                                <p class="font-bold text-xl text-center mt-7">
+                                    Voyage à travers Wikipedia d’une page de départ à une page d’arrivée en utilisant que les liens de redirections.
+                                </p>
+
+                                <p class="font-bold text-xl text-center mt-7">
+                                    Joues avec tes amis dans un salon privé et découvre les différents modes de jeux !
+                                </p>
+
+                                <p class="font-bold text-xl text-center mt-7">
+                                    Personnalise ta partie en choisissant la page de départ et d’arrivée ainsi que les différentes règles du jeu !
+                                </p>
+
+                                <div class="relative mt-10 flex flex-row justify-center">
+                                    <div class="border-4 border-100 p-4 pl-12 pr-12 rounded-full bg-accent box-mobile-solid-shadow box-mobile-solid-shadow-anim w-min cursor-pointer button-click-anim-2" bind-event-click="rulesButtonBack">
+                                        <p class="text-3xl font-medium"> C'est&nbsp;compris&nbsp;! </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide vertical end -->
+                        </div>
+                        <!-- Slide container verticla start -->
+                    </div>
+                </div>
+                <!-- Mobile version end -->
+
+                <!-- Menu desktop start -->
+                <div class="hidden absolute left-1/2 -translate-x-1/2 top-full -translate-y-full w-8/12 -mt-5 sm:flex flex-row justify-between">
+                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> VALADRI GAMES </p>
+                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> CONDITIONS D'UTILISATIONS </p>
+                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> TWITTER </p>
+                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> CONTACT </p>
+                </div>
+                <!-- Menu desktop end -->
+            </div>
+            <!-- Page wrapper end -->
+        </ce-page>
+        <!-- Home page end -->
+
+        <ce-page ce-name="play-solo" ce-extends="solo-game" class="hidden">
+            <p bind-event-click="updateStartPage" class="text-4xl"> page de départ: <span bind-content="pageStartText" class="text-red-500"></span> </p>
+            <p bind-event-click="updateEndPage" class="text-4xl"> page de fin: <span bind-content="pageEndText" class="text-red-500"></span> </p>
+
+            <a href="#game-page" class="text-5xl color-100">jouer</a>
+
+            <ce-webview ce-extends="end-page-word-definition" class="relative block">
+                <div class="absolute bg-red-500 h-96 w-96"></div>
+
+                <iframe class="absolute" bind-event-load="onLoad" width="100%" height="900px"></iframe>
+            </ce-webview>
+        </ce-page>
+
+        <ce-page ce-name="game-page" ce-extends="game-page" class="hidden">
+            <p> game page </p>
+
+            <ce-webview ce-extends="current-page-game" class="relative block">
+                <div class="absolute bg-green-500 h-96 w-96"></div>
+
+                <iframe class="absolute" bind-event-load="onLoad" width="100%" height="900px"></iframe>
+            </ce-webview>
+        </ce-page>
+    </div>
+
+    <script type="module" src="libs/jquery.js"></script>
     <script type="module" src="js/output/main.js"></script>
 </body>
 </html>

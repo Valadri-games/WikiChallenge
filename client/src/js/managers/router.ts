@@ -8,8 +8,7 @@ export default class Router {
         return Router._instance;
     }
     constructor() {
-        window.location.hash = 'play-solo';
-
+        window.location.hash = '';
         this.bindNaviguationEvent();
     }
 
@@ -30,11 +29,20 @@ export default class Router {
     }
 
     private goto(pageName: string): void {
-        if(this.pages[this.history[this.history.length - 1]].child.onClose) this.pages[this.history[this.history.length - 1]].child.onClose();
-        this.pages[this.history[this.history.length - 1]].close();
+        if(!this.pages[pageName]) {
+            window.location.hash = '';
+            return;
+        }
 
-        if(this.pages[pageName].child.onOpen) this.pages[pageName].child.onOpen();
-        this.pages[pageName].open();
+        if(this.history[this.history.length - 1] != pageName) {
+            if(this.pages[this.history[this.history.length - 1]].child.onClose) this.pages[this.history[this.history.length - 1]].child.onClose();
+            this.pages[this.history[this.history.length - 1]].close();
+        }
+        
+        if(this.pages[pageName]) {
+            if(this.pages[pageName].child.onOpen) this.pages[pageName].child.onOpen();
+            this.pages[pageName].open();
+        }
 
         this.history.push(pageName);
     }
