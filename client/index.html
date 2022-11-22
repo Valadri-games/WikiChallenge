@@ -85,7 +85,7 @@
                                     </div>
     
                                     <div class="relative mt-24 flex flex-row justify-center">
-                                        <input bind-event-input="nameInput" type="text" placeholder="Player 123" class="bg-900 border-6 w-[500px] border-100 font-medium p-5 pl-10 pr-10 text-5/5xl rounded-full box-desktop-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" />
+                                        <input bind-event-input="nameInput" type="text" placeholder="Player 123" class="outline-none bg-900 border-6 w-[500px] border-100 font-medium p-5 pl-10 pr-10 text-5/5xl rounded-full box-desktop-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" />
                                     </div>
     
                                     <div class="relative mt-24 flex flex-row justify-center">
@@ -134,7 +134,7 @@
                                 </p>
 
                                 <div class="relative mt-5 flex flex-row gap-10 pr-5">
-                                    <input type="text" placeholder="#XXXX" class="bg-900 flex-1 w-0 border-6 border-100 font-medium p-5 pl-10 pr-10 text-5/5xl rounded-full box-desktop-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" autofocus="false" />
+                                    <input type="text" placeholder="#XXXX" class="outline-none bg-900 flex-1 w-0 border-6 border-100 font-medium p-5 pl-10 pr-10 text-5/5xl rounded-full box-desktop-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" autofocus="false" />
                                     
                                     <div class="border-6 border-100 p-5 pl-32 pr-32 rounded-full bg-accent box-desktop-solid-shadow box-solid-shadow-anim w-min cursor-pointer button-click-anim-2" bind-event-click="playMultiClicked">
                                         <p class="text-5/5xl font-medium"> Rejoindre </p>
@@ -169,7 +169,7 @@
                 <!-- Mobile version start -->
                 <div class="sm:hidden">
                     <div class="absolute left-0 top-0 mt-8 ml-8 cursor-pointer home-page-mobile-header z-30" bind-event-click="hamburgerMenuCliked">
-                        <input id="top-menu-hamburger" type="checkbox" class="hidden" />
+                        <input id="top-menu-hamburger" type="checkbox" class="outline-none hidden" />
                         
                         <label id="menu-label" for="top-menu-hamburger">
                             <div class="h-1.5 w-12 bg-900 rounded-full"></div>
@@ -199,7 +199,7 @@
                                         </div>
                     
                                         <div class="relative mt-10 flex flex-row justify-center">
-                                            <input bind-event-input="nameInput" type="text" placeholder="Player 123" class="bg-900 border-4 w-[240px] border-100 font-medium p-4 pl-6 pr-6 text-3xl rounded-full box-mobile-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" autofocus="false" />
+                                            <input bind-event-input="nameInput" type="text" placeholder="Player 123" class="outline-none bg-900 border-4 w-[240px] border-100 font-medium p-4 pl-6 pr-6 text-3xl rounded-full box-mobile-solid-shadow placeholder-color" spellcheck="false" autocomplete="false" autocapitalize="true" autofocus="false" />
                                         </div>
                     
                                         <div class="relative mt-8 flex flex-row justify-center">
@@ -289,11 +289,11 @@
                 <!-- Mobile version end -->
 
                 <!-- Menu desktop start -->
-                <div class="hidden absolute left-1/2 -translate-x-1/2 top-full -translate-y-full w-8/12 -mt-5 sm:flex flex-row justify-between">
-                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> VALADRI GAMES </p>
-                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> CONDITIONS D'UTILISATIONS </p>
-                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> TWITTER </p>
-                    <p class="font-bold text-3xl opacity-80 cursor-pointer"> CONTACT </p>
+                <div class="hidden absolute left-1/2 -translate-x-1/2 top-full -translate-y-full -mt-5 sm:flex flex-row gap-x-10 lg:gap-x-28 gap-y-5">
+                    <p class="font-bold text-2xl md:text-3xl opacity-80 cursor-pointer"> VALADRI&nbsp;GAMES </p>
+                    <p class="font-bold text-2xl md:text-3xl opacity-80 cursor-pointer"> CONDITIONS&nbsp;D'UTILISATIONS </p>
+                    <p class="font-bold text-2xl md:text-3xl opacity-80 cursor-pointer"> TWITTER </p>
+                    <p class="font-bold text-2xl md:text-3xl opacity-80 cursor-pointer"> CONTACT </p>
                 </div>
                 <!-- Menu desktop end -->
             </div>
