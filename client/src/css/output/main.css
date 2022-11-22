@@ -897,6 +897,26 @@ video {
   width: 66.666667%;
 }
 
+.w-\[250px\] {
+  width: 250px;
+}
+
+.w-\[400px\] {
+  width: 400px;
+}
+
+.w-\[5500px\] {
+  width: 5500px;
+}
+
+.w-\[550px\] {
+  width: 550px;
+}
+
+.w-\[500px\] {
+  width: 500px;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
